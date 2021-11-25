@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  top:0;
+  left:0;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: url('photo-1603468620905-8de7d86b781e.jfif');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+body::after{
+  content: '';
+  position: absolute;
+  width:100%;
+  height:107%;
+  top:-8%;
+  left:0;
+  z-index: -1;
+  background: rgba(73, 73, 73, 0.788);
+}
+
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 2px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  color:#fff;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.task.reminder {
+  border-left: 5px solid green;
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.add-form {
+  margin-bottom: 40px;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  color:#fff;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+  border:none;
+  border-radius: 3px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-control-check label {
+  flex: 1;
+}
+
+.form-control-check input {
+  flex: 2;
+  height: 20px;
+}
+.no-task{
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  font-size:20px;
+  font-weight: 500;
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+}
+@media (max-width:700px){
+  .container{
+    width:80%;
+    margin-top: 50px;
+  }
+  .header{
+    border-bottom: 1px solid steelblue;
+  }
+  .header h1{
+    font-size: 28px;
+  }
+}
